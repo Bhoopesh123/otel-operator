@@ -49,13 +49,6 @@ Build and deploy the applications:
 make setup-apps
 ```
 
-Once everything is up and running, you can port-forward to any of the applications and start sending traffic.
-```
-
-If everything is properly configured, you should see traces and metrics arriving to the configured Grafana Cloud stack :tada:
-
-![App O11y view](doc/assets/appo11y.png)
-
 One you are done testing, clean everything up:
 
 ```bash
