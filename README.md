@@ -51,7 +51,7 @@ make setup-apps
 
 check the pod with port-forwarding and hit the traffic:
 
-kubectl port-forward pod/rolldice-dotnet-68f556b87c-9jl5w 8083:8083
+    kubectl port-forward pod/rolldice-dotnet-68f556b87c-9jl5w 8083:8083
 
 One you are done testing, clean everything up:
 
