@@ -11,7 +11,7 @@ spec:
     - name: GRAFANA_CLOUD_INSTANCE_ID
       value: '965620'
     - name: GRAFANA_CLOUD_API_KEY
-      value: 'glc_eyJvIjoiMTE1NjExOCIsIm4iOiJzdGFjay05NjU2MjAtb3RscC13cml0ZS1vdGxwX3J3IiwiayI6IkxnajJ3NTE2d0lRZTg2OUU3MmlyaWljNCIsIm0iOnsiciI6InByb2QtdXMtZWFzdC0wIn19'
+      value: 'glc_eyJvIjoiMTE1NjExOCIsIm4iOiJzdGFjay05NjU2MjAtb3RscC13cml0ZS1vdGxwX3J3MiIsImsiOiJNTDlmNFAzVm5BNjZZMVVjNVM1WTVNdzQiLCJtIjp7InIiOiJwcm9kLXVzLWVhc3QtMCJ9fQ=='
   config:
     receivers:
       otlp:
