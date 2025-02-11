@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: rolldice-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rolldice-java
+  template:
+    metadata:
+      labels:
+        app: rolldice-java
+      annotations:
+        instrumentation.opentelemetry.io/inject-java: "true"
+        resource.opentelemetry.io/service.name: "dice-java"
+        resource.opentelemetry.io/service.namespace: "game"
+        resource.opentelemetry.io/service.version: "1.2.3"
+        resource.opentelemetry.io/deployment.environment.name: "production"
+    spec:
+      containers:
+      - name: app
+        image: rolldice-java:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+
