@@ -6,7 +6,7 @@ spec:
   image: otel/opentelemetry-collector-contrib:latest
   serviceAccount: otel-collector
   env:
-    - name: GRAFANA_CLOUD_OTLP_ENDPOINT
+    - name: GRAFANA_CLOUD_OTLP_ENDPOINT #bhoopeshsharma
       value: 'https://otlp-gateway-prod-us-east-0.grafana.net/otlp'
     - name: GRAFANA_CLOUD_INSTANCE_ID
       value: '965620'
