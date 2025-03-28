@@ -53,5 +53,8 @@ To Search all of the time series data points grouping by job  in query
 
 Generate the traffic  
 
-    k port-forward pod/rolldice-python-7bbd9b4757-5gwvt 1111:8082
+    kubectl port-forward pod/rolldice-python-7bbd9b4757-5gwvt 1111:8082
     http://127.0.0.1:1111/rolldice
+
+    kubectl port-forward svc/petclinic 1111:80
+    http://127.0.0.1:1111
