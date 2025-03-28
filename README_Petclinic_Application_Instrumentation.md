@@ -41,15 +41,17 @@ Reference Documentation: https://opentelemetry.io/docs/
 
 # 6. Install Petclinic Java Springboot application  
 
-    kubectl apply -f manifests/applications/springbootjava_app/python.yaml
+    kubectl apply -f manifests/applications/petclinic.yaml
 
-# 6. Validate the metrics on Grafana  
+# 7. Validate the metrics on Grafana  
 
 To Search all of the time series data points grouping by job  in query  
 
     count({__name__=~".+"}) by (job)
 
+# 8. Test all the applications by generating traffice
 
-Generate the traffic
-k port-forward pod/rolldice-python-7bbd9b4757-5gwvt 1111:8082
-http://127.0.0.1:1111/rolldice
+Generate the traffic  
+
+    k port-forward pod/rolldice-python-7bbd9b4757-5gwvt 1111:8082
+    http://127.0.0.1:1111/rolldice
