@@ -53,3 +53,7 @@ Generate the traffic
 
     kubectl port-forward svc/petclinic 1111:80
     http://127.0.0.1:1111
+
+Import the Beyla Dashboard
+
+    https://grafana.com/grafana/dashboards/19923-beyla-red-metrics/
