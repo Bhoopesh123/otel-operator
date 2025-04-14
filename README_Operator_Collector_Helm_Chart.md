@@ -9,11 +9,11 @@ Reference Documentation: https://opentelemetry.io/docs/
 
 # 2. Install OpenTelemetry Operator using Helm Chart  
 
-helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
-helm upgrade --install my-opentelemetry-operator open-telemetry/opentelemetry-operator \
-  --set "manager.collectorImage.repository=otel/opentelemetry-collector-k8s" \
-  --set admissionWebhooks.certManager.enabled=true \
-  --set admissionWebhooks.autoGenerateCert.enabled=true
+    helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+    helm upgrade --install my-opentelemetry-operator open-telemetry/opentelemetry-operator \
+    --set "manager.collectorImage.repository=otel/opentelemetry-collector-k8s" \
+    --set admissionWebhooks.certManager.enabled=true \
+    --set admissionWebhooks.autoGenerateCert.enabled=true
 
 # 3. Configure and Run Alloy Collector on Minikube Cluster
 
