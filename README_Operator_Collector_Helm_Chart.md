@@ -15,7 +15,13 @@ Reference Documentation: https://opentelemetry.io/docs/
     --set admissionWebhooks.certManager.enabled=true \
     --set admissionWebhooks.autoGenerateCert.enabled=true
 
-# 3. Configure and Run Alloy Collector on Minikube Cluster
+# 3. Install Prometheus Node Exporter on Minikube Cluster
+
+    helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+    helm repo update
+    helm upgrade --install node-exporter prometheus-community/prometheus-node-exporter
+
+# 4. Configure and Run Alloy Collector on Minikube Cluster
 
 Make sure to update the node_exporter service ip in alloy configuration in configmap.alloy file before creating configmap
 
@@ -24,15 +30,15 @@ Make sure to update the node_exporter service ip in alloy configuration in confi
     helm  upgrade --install --namespace metrics alloy grafana/alloy -f alloy_k8s_app_monitoring.yaml
 
 
-# 4. Install Instrumentation 
+# 5. Install Instrumentation 
 
     kubectl apply -f manifests/instrumentation_alloy.yaml
 
-# 5. Install Petclinic Java Springboot application  
+# 6. Install Petclinic Java Springboot application  
 
     kubectl apply -f manifests/applications/petclinic.yaml
 
-# 6. Validate the Metrics on Grafana  
+# 7. Validate the Metrics on Grafana  
 
 To Search all of the time series data points grouping by job  in query  
 
